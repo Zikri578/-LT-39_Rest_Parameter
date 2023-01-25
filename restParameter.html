@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Parameter - Javascript</title>
+    <script src="restParameter.js"></script>
+    <script>
+        function sum(name, ...data){
+            // membuat variabel total dengan valuenya 0
+            let total = 0;
+
+            // melakukan pengkondisian dimana variabel item dikembalikan kedalam data untuk melakukan iterable
+            for (const item of data) {
+                // melakukan operasi penjumlahan total = total + item
+                total += item;  // total = total + item
+            }   
+            // menampilkan ouput di console
+            console.log(`Total ${name} is ${total}`);
+        }
+        // melakukan pemanggilan function yang valuenya adalah string, dan integer untuk melakukan penjumlahan
+        sum("Orange", 1, 2, 3, 4, 5, 6, 7); // output : 28
+        sum("Apple", 45, 67, 89, 23, 12, 67);   // output : 303
+        sum("Banana", 34, 67, 3, 57, 134, 65);  // output : 360
+    </script>
+</head>
+<body>
+</body>
+</html>
